@@ -1,0 +1,47 @@
+<DOCTYPE html>
+<html>
+	<head>
+	<title>CSS Selectors</title>
+     <style>
+p{
+font-size:20px;
+font-family:consolas;
+ }
+[title=.head]:: first-letter{
+			font-size=30px;
+			font-style=bold;
+			text-transform:uppercase;
+		}	
+h1,h2{
+font-style:bold;
+color:brown;
+font-family: Calibri;
+}
+h2~ol, .block{
+			border-style:outset;
+			width:60%;
+			color:blue;
+		}
+ol:hover{
+		   border-style:solid;
+		   border-color:white;
+	     }
+[title=-head]:hover{
+		  width:60%;
+		  border-style:solid;
+		  background-color:gray;
+         } 
+   	</style>
+</head>
+<body>
+<h1>CSS selectors</h1>
+<p> CSS selectors are used to "find" (or select) the HTML elements you want to style. </p>
+<ol class="block" title="block">
+<li>simple selector</li>
+<li>combinator selctor</li>
+<li>Pseudo-class selector</li>
+<li>Pseudo-element selctor</li>
+<li> attribute selector</li>
+</body>
+</html>
+
