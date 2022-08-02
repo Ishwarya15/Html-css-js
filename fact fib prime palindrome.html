@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>text box and button</title>
+	</head>
+<body>
+	<h1>Enter a number :<input type="text"id="input"></h1>
+		<h1 id="factOp">Factorial :</h1>
+		<h1 id="fibOp">FibanocciSeries :</h1>
+		<h1 id="primeOp">Prime Numbers :</h1>
+		<h1 id="isPalinOp">Is Palindrome :</h1>
+		<button onclick="getNum()">Get Number</button>
+<button onclick=getElementById("factOp").innerHTML=fun_fact()>Factorial</button>
+<button onclick=getElementById("fibOp").innerHTML=fun_fib()>Fibanocci</button>
+<button onclick=getElementById("primeOp").innerHTML=fun_prime()>Prime</button>
+<button onclick=getElementById("isPalinOp").innerHTML=fun_palin()>Palindrome</button>
+		<script>
+			var n;
+			function getNum()
+			{
+				n=document.getElementById("input").value;
+			}
+			function fun_fact()
+			{
+				let f=1;
+				for(let i=1;i<=n;i++)
+				{
+					f*=i;
+				}
+				return f;
+			}
+			function fun_fib()
+			{
+				let f0=0;
+				let f1=1;
+				var f2;
+				var str="";
+				str+=f0+" ";
+				str+=f1+" ";
+				for(let i=2;i<n;i++)
+				{
+					f2=f0+f1;
+					str+=f2+" ";
+					f0=f1;
+					f1=f2;
+				}
+				return str;
+			}
+			function fun_prime()
+			{
+				var str="";
+				for(let i=2;i<=n;i++)
+				{
+					var count=0;
+					for(let j=1;j<=i;j++)
+					{
+						if(i%j==0)
+						{
+							count++;
+						}
+					}
+					if(count==2)
+					{
+						str+=i+" ";
+					}
+				}
+				return str;
+			}
+			function fun_palin()
+			{
+				let r=0;
+				let s=0;
+				res=n;
+				while(n!=0)
+				{
+					r=n%10;
+					s=(s*10)+r;
+					n=Math.floor(n/10);
+				}
+				console.log(1/2);
+				if(s==res)
+				{
+					return "TRUE";
+				}
+				else
+				{
+					return "FALSE";
+				}
+			}
+		</script>
+	</body>
+</html>

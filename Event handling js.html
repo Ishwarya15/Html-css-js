@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Event Handling</title>
+	</head>
+	<body onload="refresh()">
+		<h1 align="center">EVENT HANDLING</h1>
+<button type="button" onclick="newbrowser()">Click here</button><br><br>
+<imgonmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="flower.jpg" alt="Flower" width="32" height="32">
+		<script>
+			function newbrowser(){
+				window.open("https://aec.edu.in");
+			}
+			function refresh()
+			{
+			var r=Math.floor(Math.random()*256);
+			var g=Math.floor(Math.random()*256);
+			var b=Math.floor(Math.random()*256);
+			var bgc="rgb("+r+","+g+","+b+")";
+			document.body.style.background=bgc;
+			}	
+			function bigImg(x) {
+			x.style.height = "124px";
+			x.style.width = "124px";
+			}
+			function normalImg(x) {
+			x.style.height = "64px";
+		x.style.width = "64px";
+			}
+		</script>	
+	</body>
+</html>

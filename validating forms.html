@@ -1,0 +1,166 @@
+
+<!doctype html>
+
+<html>
+
+     <head>
+
+          <title>validating form</title>
+
+          <script>
+
+              function validForm()
+
+              {
+
+              var str="";
+
+              var re_name=/^[A-Za-z ]+$/;
+
+              var re_id=/^[0-9]+A91A[0-9]+[0-9A-Z]+$/;
+
+              var re_ph=/^[6-9][0-9]{9}$/;
+
+var re_mail=/^[0-9a-zA-Z.$#@!%^&*]+@gmail.com$/;
+
+              var re_pwd=/^[A-Za-z]+[@#%&*]+[0-9]+$/;
+
+              var name=document.forms['form1']['name'].value;
+
+var roll=document.forms['form1']['rollno']. value;
+
+              var ph  =document.forms['form1']['phno'].value;
+
+              var mail=document.forms['form1']['mail'].value;
+
+              var pwd=document.forms['form1']['pwd'].value;
+
+                   if(re_name.test(name))
+
+                   {
+
+                        console.log("valid name");
+
+                   }
+
+                   else
+
+                   {
+
+                        str+="Invalid name";
+
+                   }
+
+                   if(re_id.test(roll))
+
+                   {
+
+                        console.log("valid id");
+
+                   }
+
+                   else
+
+                   {
+
+                        str+="Invalid id";
+
+                   }
+
+                   if(re_ph.test(ph))
+
+                   {
+
+                        console.log("valid phone number");
+
+                   }
+
+                   else
+
+                   {
+
+                        str+="Invalid phone number";
+
+                   }
+
+                   if(re_mail.test(mail))
+
+                   {
+
+                        console.log("valid mail id");
+
+                   }
+
+                   else
+
+                   {
+
+                        str+="Invalid invalid mail id";
+
+                   }
+
+                   if(re_pwd.test(pwd))
+
+                   {
+
+                        console.log("valid password");
+
+                   }
+
+                   else
+
+                   {
+
+                        str+="Invalid password";
+
+                   }                      
+
+                   if(str.length>1)
+
+                   {
+
+                        alert(str);
+
+                   }
+
+              }
+
+          </script>
+
+     </head>
+
+<body>
+
+          <h1 align="center">Validating Forms</h1>
+
+          <form name="form1">
+
+Name             :<br><input type="text" id="name"><br>
+
+Id               :<br><input type="text"    id="rollno"><br>
+
+Gender           :<br><select name="gender" value="select">
+
+                           <option>select</option>
+
+                           <option value="Male">Male</option>
+
+<option value="Female">Female     </option>
+
+<option value="none">Other   </option>
+
+                           </select><br>
+
+Contact Number       :<br><input type="text" id="phno"><br>
+
+Mail id              :<br><input type="text" id="mail"><br>
+
+Password            :<br><input type="password" id="pwd"><br>
+
+          </form>
+
+<button type="button"  onclick="validForm()"> submit </button>
+
+     </body>
+
+</html>

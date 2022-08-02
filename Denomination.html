@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>Denomintaion</title>
+</head>
+<body>
+<p>Number:<input type="text" id="number"><br></p>
+<p>Hundereds:<input type="text" id="hundreds"><br></p>
+<p>Fifties:<input type="text" id="fifties"><br></p>
+<p>Twenties:<input type="text" id="twenties"><br></p>
+<p>Tens:<input type="text" id="tens"><br></p>
+<p>Fives:<input type="text" id="fives"><br></p>
+<p>Twos:<input type="text" id="twos"><br></p>
+<p>Ones:<input type="text" id="ones"><br></p>
+<script>
+var x=parseInt(window.prompt("enter a number:"));
+document.getElementById("number").value=x;
+if(x%100>=0)
+{
+h=Math.floor(x/100);
+x=x%100;
+}
+if(x%50>=0)
+{
+f=Math.floor(x/50);
+x=x%50;
+}
+if(x%20>=0)
+{
+tw=Math.floor(x/20);
+x=x%20;
+}
+if(x%10>=0)
+{
+t=Math.floor(x/10);
+x=x%10;
+}
+if(x%5>=0)
+{
+fi=Math.floor(x/5);
+x=x%5;
+}
+if(x%2>=0)
+{
+two=Math.floor(x/2);
+x=x%2;
+}
+document.getElementById("hundreds").value=h;
+document.getElementById("fifties").value=f;
+document.getElementById("twenties").value=tw;
+document.getElementById("tens").value=t;
+document.getElementById("fives").value=fi;
+document.getElementById("twos").value=two;
+document.getElementById("ones").value=x;
+</script>
+</body>
+</html>
